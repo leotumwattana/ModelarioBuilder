@@ -2,9 +2,9 @@
   <div class="application_menu">
     <%= link_to 'New', new_modelario_path %>
   </div>
-  <ul class="modelario_list">
+  <ul class="modelarios">
     <% @modelarios.each do |modelario| %>
-    <li>
+    <li class="modelario">
       <%= link_to modelario.title, modelario_path(modelario) %>
       <%= link_to 'delete', modelario_path(modelario.id), confirm: "Delete modelario: #{modelario.title}?", method: :delete %>
       <%= link_to 'edit', edit_modelario_path(modelario.id) %>

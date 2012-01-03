@@ -1,12 +1,12 @@
 <div id="<%= stock_card.id %>" class="stock_card <%= stock_card.offers_as_string %>">
-  <div class="sku"><%= stock_card.sku %></div>
-  <div class="name"><%= stock_card.name %></div>
-  <div class="photo"><%= image_tag stock_card.photo %></div>
-  <div class="location">Location</div>
+  <div class="sku_field"><%= stock_card.sku %></div>
+  <div class="name_field"><%= stock_card.name %></div>
+  <div class="photo_frame"><%= image_tag stock_card.photo %></div>
+  <div class="location_field">Location</div>
   <% unless stock_card.note1.nil? or stock_card.note1.empty? then %>
-    <div class="note1"><%= stock_card.note1 %></div>
-    <div class="note2"><%= stock_card.note2 %></div>
-    <div class="note3"><%= stock_card.note3 %></div>
+    <div class="note1_field"><%= stock_card.note1 %></div>
+    <div class="note2_field"><%= stock_card.note2 %></div>
+    <div class="note3_field"><%= stock_card.note3 %></div>
   <% end %>
   <div class="overlay hidden">
     <%= link_to "M", "#", :class => "overlay_button move" %>

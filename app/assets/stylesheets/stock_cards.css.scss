@@ -2,6 +2,68 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.stock_card {
+
+	padding: 0;
+	text-align: center;
+	color: black;
+	font-size: 0.7em;
+	width: 3.2cm;
+	border: 2px solid;
+	min-height: 4cm;
+	float: left;
+	position: relative;
+	
+	.sku_field {
+		height: 0.4cm;
+	}
+	.name_field {
+		height: 0.4cm;
+	}
+	.photo_frame {
+		height: 2.91cm;
+	}
+	.photo_frame img {
+		max-width: 95%;
+		max-height: 95%;
+	}
+	.location_field {
+		text-align: left;
+		padding-left: 2px;
+	}
+	.note1_field, .note2_field, .note3_field {
+		text-align: left;
+		font-size: 0.1em;
+		padding-top: 0.3em;
+		padding-left: 2px;
+	}
+	
+	.overlay_button {
+		position: absolute;
+		width: 20px;
+		margin: 0;
+		
+		&.move {
+			top: 5px;
+			left: 5px;
+		}
+		&.edit {
+			bottom: 5px;
+			right: 40px;
+		}
+		&.delete {
+			bottom: 5px;
+			right: 5px;
+		}
+		&.delete_stock_card {
+			bottom: 5px;
+			right: 80px;
+		}
+	}
+	
+	
+}
+
 a.overlay_button {
 	font: bold 12px/1.4em "Lucida Grande", Arial, Verdana;
 	color: white;
@@ -51,38 +113,7 @@ div.stock_cards {
 	-moz-box-orient: horizontal;
 }
 
-div.stock_card {
-	float: left;
-	position: relative;
-	
-	.overlay_button {
-		position: absolute;
-		width: 20px;
-		margin: 0;
-		
-		&.move {
-			top: 5px;
-			left: 5px;
-		}
-		&.edit {
-			bottom: 5px;
-			right: 40px;
-		}
-		&.delete {
-			bottom: 5px;
-			right: 5px;
-		}
-		&.delete_stock_card {
-			bottom: 5px;
-			right: 80px;
-		}
-	}
-}
 
-.photo img {
-	max-width: 95%;
-	max-height: 95%;
-}
 
 img.photo {
 	max-height: 200px;

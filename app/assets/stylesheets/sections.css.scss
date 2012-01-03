@@ -1,6 +1,6 @@
 // Place all the styles related to the Sections controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+	// You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.section {
 	position: relative;
@@ -13,9 +13,6 @@ div.section {
 	display: box;
 	display: -webkit-box;
 	display: -moz-box;
-	box-orient: horizontal;
-	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
 	
 	div.title {
 		margin: 0;
@@ -39,6 +36,28 @@ div.section {
 			-webkit-transform: rotate(-90deg); 
 			-moz-transform: rotate(-90deg);
 	  }
+	}
+	
+	ul {
+		list-style-type: none;
+		border: 0;
+		margin: 0;
+		padding: 0;
+
+		display: box;
+		display: -webkit-box;
+		display: -moz-box;
+		box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		
+		&.vertical_sortable {
+			@include flex_box_vertical;
+		}
+	}
+	li {
+		text-decoration: none;
+		display: box;
 	}
 	
 	div.section_menu {
