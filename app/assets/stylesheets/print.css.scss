@@ -1,0 +1,17 @@
+$blue: #304C7B;
+
+@media print {
+	.noprint { display: none; }
+	
+	body {
+		background: white;
+	}
+	
+	div.modelario {
+		border: 0;
+	}
+	
+	.ui-resizable-s {
+		display: none;
+	}
+}

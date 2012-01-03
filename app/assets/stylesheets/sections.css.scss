@@ -1,0 +1,84 @@
+// Place all the styles related to the Sections controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blue: #304C7B;
+$menu_gray: #F5F5F5;
+$menu_border_gray: #DEDEDE;
+
+div.section {
+	position: relative;
+	width: 100%;
+	border: 0;
+	margin: 10px 0;
+	padding: 0;
+	min-height: 100px;
+	
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	
+	div.title {
+		margin: 0;
+		background: $blue;
+		overflow: hidden;
+		width: 3em;
+		min-height: 4cm;
+		position:relative;
+		cursor: pointer;
+		span {
+			display: block;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			text-align: center;
+			white-space: nowrap;
+			margin-left: 2em;
+			color: white;
+			-moz-transform-origin: bottom left;
+			-webkit-transform-origin: bottom left;
+			-webkit-transform: rotate(-90deg); 
+			-moz-transform: rotate(-90deg);
+	  }
+	}
+	
+	div.section_menu {
+		margin: 0;
+		background: $menu_gray;
+		overflow: hidden;
+		width: 4em;
+		padding: 10px;
+		min-height: 4cm;
+		border: 1px solid $menu_border_gray;
+	}
+	
+	/* Content can include subsections & stock_cards */
+	div.content {
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* Flexible Box Layout for stock_card items */
+	div.stock_cards {
+		display: box;
+		display: -webkit-box;
+		display: -moz-box;
+		box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+	}
+}
+.section {
+	position: relative;
+	.ui-resizable-s {
+		position: absolute;
+		background: green;
+		width: 10px;
+		height: 10px;
+		bottom: 0px;
+		right: 0px;
+	}
+}

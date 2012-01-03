@@ -1,0 +1,2 @@
+module ModelarioHelper
+end

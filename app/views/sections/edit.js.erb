@@ -1,0 +1,7 @@
+$('#popup').removeClass('hidden').html("<%= escape_javascript(render(:partial => 'sections/edit_section_form')) %>")
+
+$('#section_sku_tokens').tokenInput('/stock_cards.json', { 
+	crossDomain: false,
+	theme: 'facebook'
+	prePopulate: $('#section_sku_tokens').data('pre')
+});

@@ -1,0 +1,10 @@
+<div class="form small">
+	<h1>Stock Card - Editor</h1>
+	<%= form_for @modelario do |f| %>
+	  <%= f.text_field :title %>
+	  <%= collection_select(:modelario, :color_theme_id, ColorTheme.all, :id, :name) %>
+		<div class="button_bar">
+      <%= f.submit 'Update' %>
+    </div>
+	<% end %>
+</div>

@@ -1,0 +1,17 @@
+<div class='page'>
+  <div class='form small'>
+    <%= form_tag controller: 'stock_cards', action: 'batch_add_or_update' do %>
+      <%= text_area_tag :skus_names, nil, :size => '35x20' %>
+      <div class="button_bar" style="text-align: left;">
+        <%= hidden_field_tag "offer_ids[]", nil %>
+        <% Offer.order(:name).each do |offer| %>
+          <%= check_box_tag "offer_id[]", offer.id, nil, id: dom_id(offer) %>
+          <%= label_tag dom_id(offer), offer.name %><br>
+        <% end %>
+      </div>
+      <div class="button_bar">
+        <%= submit_tag 'Add' %>
+      </div>
+    <% end %>
+  </div>
+</div>

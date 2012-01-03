@@ -1,0 +1,28 @@
+// Place all the styles related to the Offers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.offers {
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid #DEDEDE;
+	border-bottom: 1px solid #DEDEDE;
+	padding: 5px 10px;
+	background: #F5F5F5;
+	
+	
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	
+	&.hidden {
+		display: none;
+	}
+	
+	font-size: 12px;
+	color: black;
+	background: white;
+}

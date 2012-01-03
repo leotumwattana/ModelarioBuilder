@@ -1,0 +1,6 @@
+<div class="offers hidden">
+  <% Offer.all.each do |offer| %>
+    <%= check_box_tag offer.name %>
+    <label><%= offer.name %></label>
+  <% end %>
+</div>

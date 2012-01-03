@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="form small">
+    <h1>New Assignment</h1>
+    <%= form_for @assignment do |f| %>
+      <%= f.hidden_field :section_id, :value => params[:section_id] %> <br>
+      <label>Stock Card SKU</label><%= f.text_field :stock_card_sku, data: {autocomplete_source: StockCard.order(:sku).map(&:sku)} %><br>
+      <div class="button_bar">
+        <%= f.submit 'Add' %>
+      </div>
+    <% end %>
+  </div>
+</div>

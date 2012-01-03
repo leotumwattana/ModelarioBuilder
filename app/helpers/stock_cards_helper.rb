@@ -1,0 +1,2 @@
+module StockCardsHelper
+end

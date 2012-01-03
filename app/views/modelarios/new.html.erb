@@ -1,0 +1,5 @@
+<%= form_for @modelario do |f| %>
+  <%= f.text_field :title %>
+  <%= collection_select(:modelario, :color_theme_id, ColorTheme.all, :id, :name) %>
+  <%= f.submit 'Create' %>
+<% end %>

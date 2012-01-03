@@ -1,0 +1,22 @@
+
+
+<!-- <div class="modelario #{@modelario.color_theme.name.downcase}"> -->
+
+<%= tag("div", :class => "modelario " + @modelario.color_theme.name.downcase) %>
+  <div class="menu noprint">
+    <%= link_to 'Open', modelarios_path %>
+    <%= link_to 'Edit', edit_modelario_path(@modelario), remote: true %>
+    <%= link_to 'Offers', '#', :class => "button", :id => 'offer_button' %>
+    <%= link_to 'Add Section', new_modelario_section_path(@modelario, :root => true) %>
+		<%= link_to 'New Stock Card', new_stock_card_path, remote: true %>
+    <%= render :partial => 'offers/offers' %>
+  </div>
+  <div class="modelario_title">
+    <%= @modelario.title %>
+  </div>
+  <% unless @modelario.sections.empty? %>
+      <%= render :partial => 'sections/section', :collection => @modelario.root_sections, :as => :section %>
+  <% end %>
+</div>
+
+

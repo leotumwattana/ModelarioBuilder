@@ -1,0 +1,93 @@
+// Place all the styles related to the StockCards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a.overlay_button {
+	font: bold 12px/1.4em "Lucida Grande", Arial, Verdana;
+	color: white;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+	filter: dropshadow(color=#1c1c1c,offx=0,offy=1);
+	display: block;
+	display: inline-block;
+	text-align: center;
+	border: none;
+	padding: 5px 4px;
+	margin-bottom: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
+	-moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	border-image: initial;
+	/* Coloring */
+	color: #1A1A1A;
+	text-shadow: 0 0 1px white;
+	background: #F9F9F9;
+	background: #F9F9F9 -webkit-gradient( linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .2)),to(transparent));
+	background: #F9F9F9 -moz-linear-gradient( top,rgba(255, 255, 255, .4),transparent);
+	
+	&:hover {
+		background: #F9F9F9 -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .55)),to(transparent));
+		background: #F9F9F9 -moz-linear-gradient( top,rgba(255, 255, 255, .55),transparent);
+		cursor: pointer;
+	}
+	
+	&:active {
+		background:#f9f9f9 -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(0,0,0,.3)),to(rgba(0,0,0,0)));background:#f9f9f9 -moz-linear-gradient( top,rgba(0,0,0,.1),rgba(0,0,0,0));
+	}
+}
+
+div.stock_cards {
+	width: 95%;
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+}
+
+div.stock_card {
+	float: left;
+	position: relative;
+	
+	.overlay_button {
+		position: absolute;
+		width: 20px;
+		margin: 0;
+		
+		&.move {
+			top: 5px;
+			left: 5px;
+		}
+		&.edit {
+			bottom: 5px;
+			right: 40px;
+		}
+		&.delete {
+			bottom: 5px;
+			right: 5px;
+		}
+		&.delete_stock_card {
+			bottom: 5px;
+			right: 80px;
+		}
+	}
+}
+
+.photo img {
+	max-width: 95%;
+	max-height: 95%;
+}
+
+img.photo {
+	max-height: 200px;
+}
+
+.zango_photo_path {
+	display: none;
+}

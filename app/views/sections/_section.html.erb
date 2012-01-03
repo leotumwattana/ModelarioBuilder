@@ -1,0 +1,29 @@
+<div class="section">
+  <div id="section_<%= section.id %>" class="title">
+    <span><%= section.title %></span>
+  </div>
+  <div id="section_<%= section.id %>_menu" class="section_menu hidden">
+    <%= link_to '+ Section', new_modelario_section_path(section.modelario, :subsectionof => section.id), :class => 'overlay_button' %>
+    <%= link_to 'Edit Section', edit_modelario_section_path(section.modelario, section), :class => 'overlay_button' %>
+    <%= link_to 'Delete Section', [section.modelario, section], :confirm => 'Are you sure?', method: :delete, :class => 'overlay_button' %>
+  </div>
+  <div class="content">
+    <% unless section.subsections.empty? then %>
+      <ul class="vertical_sortable" data-update-url="<%= sort_modelario_sections_url(section.modelario) %>">
+        <% section.subsections.order("position").each do |section| %>
+          <%= content_tag_for :li, section do %>
+            <%= render :partial => 'sections/section', :object => section, :as => :section %>
+          <% end %>
+        <% end %>
+      </ul>
+    <% end %>
+    <div class="stock_cards">
+      <div class="spacer"></div>
+      <% unless section.assignments.empty? then %>
+        <ul class="sortable" data-update-url="<%= sort_assignments_url %>" >
+          <%= render :partial => 'assignments/assignment', :collection => section.assignments.order('position'), :as => :assignment %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
