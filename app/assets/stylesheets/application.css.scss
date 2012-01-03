@@ -4,8 +4,15 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require token-input-facebook.css
- *= require_tree . 
 */
+
+@import "modelario.css.scss";
+@import "assignments.css.scss";
+@import "modelario.css.scss";
+@import "offers.css.scss";
+@import "sections.css.scss";
+@import "sections.css.scss";
+@import "print.css.scss";
 
 $border_blue: #70A7BB;
 $menu_gray: #F5F5F5;
