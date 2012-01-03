@@ -6,6 +6,77 @@
  *= require token-input-facebook.css
 */
 
+$blue: #304C7B;
+$border_blue: #70A7BB;
+$menu_gray: #F5F5F5;
+$menu_border_gray: #DEDEDE;
+
+/* Is this used? */
+@mixin rounded_corners($radius: 5px) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-khtml-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin flex_box_horizontal {
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+}
+
+@mixin flex_box_vertical {
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+
+@mixin stock_card_colors($base_color) {
+	/* Default color settings */
+	color: white;
+	border-color: $base_color;
+	.sku {
+		color: $base_color;
+		background: white;
+		border-bottom: 2px solid $base_color;
+	}
+	.name {
+		color: $base_color;
+		background: white;
+		border-bottom: 2px solid $base_color;
+	}
+	.location {
+		color: $base_color;
+		border-top: 2px solid $base_color;
+	}
+	.note1, .note2, .note3 {
+		color: $base_color;
+		background: white;
+	}
+	
+	/* Highlight color settings */
+	&.highlight {
+		.sku {
+			color: white;
+			background: $base_color;
+		}
+		.name {
+			color: white;
+			background: $base_color;
+		}
+		.note1, .note2, .note3 {
+			color: white;
+			background: $base_color;
+		}
+	}
+}
+
 @import "modelario.css.scss";
 @import "assignments.css.scss";
 @import "modelario.css.scss";
@@ -14,16 +85,7 @@
 @import "sections.css.scss";
 @import "print.css.scss";
 
-$border_blue: #70A7BB;
-$menu_gray: #F5F5F5;
-$menu_border_gray: #DEDEDE;
 
-@mixin rounded_corners($radius: 5px) {
-	-moz-border-radius: $radius;
-	-webkit-border-radius: $radius;
-	-khtml-border-radius: $radius;
-	border-radius: $radius;
-}
 
 .clear {
 	border: 0;
