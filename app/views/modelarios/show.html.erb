@@ -3,7 +3,7 @@
 <!-- <div class="modelario #{@modelario.color_theme.name.downcase}"> -->
 
 <%= tag("div", :class => "modelario " + @modelario.color_theme.name.downcase) %>
-  <div class="menu noprint">
+  <div class="application_menu noprint">
     <%= link_to 'Open', modelarios_path %>
     <%= link_to 'Edit', edit_modelario_path(@modelario), remote: true %>
     <%= link_to 'Offers', '#', :class => "button", :id => 'offer_button' %>
