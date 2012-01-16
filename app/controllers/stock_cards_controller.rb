@@ -2,7 +2,7 @@ class StockCardsController < ApplicationController
   respond_to :html, :xml, :js, :json
   
   def index
-    @stock_cards = StockCard.where("sku like ? OR name like ?", "%#{params[:q]}%", "%#{params[:q]}%")
+    @stock_cards = StockCard.where("sku like ? OR name like ?", "%#{params[:q]}%", "%#{params[:q]}%").order(:sku)
     respond_with @stock_cards
   end
   
