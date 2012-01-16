@@ -9,6 +9,7 @@ div.section {
 	margin: 10px 0;
 	padding: 0;
 	min-height: 100px;
+	padding-top: -2px; /* */
 	
 	display: box;
 	display: -webkit-box;
@@ -44,12 +45,12 @@ div.section {
 		margin: 0;
 		padding: 0;
 
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		box-orient: horizontal;
-		-webkit-box-orient: horizontal;
-		-moz-box-orient: horizontal;
+//		display: box;
+//		display: -webkit-box;
+//		display: -moz-box;
+//		box-orient: horizontal;
+//		-webkit-box-orient: horizontal;
+//		-moz-box-orient: horizontal;
 		
 		&.vertical_sortable {
 			@include flex_box_vertical;
@@ -74,6 +75,7 @@ div.section {
 	div.content {
 		margin: 0;
 		padding: 0;
+		width: 95%;
 	}
 	
 	/* Flexible Box Layout for stock_card items */

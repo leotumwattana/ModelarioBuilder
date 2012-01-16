@@ -21,3 +21,18 @@
     </div>
   <% end %>
 </div>
+
+<%= form_for @stock_card, do |f| %>
+	<div class="new_form_box">
+		<h1>New Stock Card :</h1>
+		<label>
+			<span>SKU</span>
+			<%= f.text_field :sku, :class => 'sku input_text' %>
+		</label>
+		<label>
+			<span>Name</span>
+			<%= f.text_field :name, :class => 'input_text' %>
+		</label>
+		<%= f.submit 'Create', class: 'button' %>
+	</div>
+<% end %>

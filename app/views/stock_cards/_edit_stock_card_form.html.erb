@@ -8,6 +8,7 @@
     <% unless @stock_card.local_image_exists? %>
       <label style='color: red;'>Non-local Image</label> <br>
     <% end %>
+    <label>Watch?</label> <%= f.check_box :watch %> <br>
     <label>Photo SKU</label> <%= text_field_tag :photo_sku %> <br>
     <label>Note 1</label> <%= f.text_field :note1 %> <br>
     <label>Note 2</label> <%= f.text_field :note2 %> <br>

@@ -1,4 +1,4 @@
-<div id="<%= stock_card.id %>" class="stock_card <%= stock_card.offers_as_string %>">
+<div id="<%= stock_card.id %>" class="stock_card <%= stock_card.offers_as_string %> <%= stock_card.watch ? 'watch' : 'jewelry' %>">
   <div class="sku_field"><%= stock_card.sku %></div>
   <div class="name_field"><%= stock_card.name %></div>
   <div class="photo_frame"><%= image_tag stock_card.photo %></div>
@@ -8,6 +8,22 @@
     <div class="note2_field"><%= stock_card.note2 %></div>
     <div class="note3_field"><%= stock_card.note3 %></div>
   <% end %>
+  
+  <table>
+      <tr>
+        <td>Alternatives</td>
+        <td>Location</td>
+      </tr>
+      <tr>
+        <td>Strap</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Buckle</td>
+        <td></td>
+      </tr>
+    </table>
+  
   <div class="overlay hidden">
     <%= link_to "M", "#", :class => "overlay_button move" %>
     <%= link_to "E", edit_stock_card_path(stock_card.id), :class => "overlay_button edit", remote: true %>

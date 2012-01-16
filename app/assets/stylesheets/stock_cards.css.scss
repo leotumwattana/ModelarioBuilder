@@ -2,8 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.stock_card {
+div.stock_cards {
+	width: 95%;
+}
 
+div.stock_card {
+	margin-left: -2px;
+	margin-bottom: 4px;
 	padding: 0;
 	text-align: center;
 	color: black;
@@ -16,12 +21,16 @@ div.stock_card {
 	
 	.sku_field {
 		height: 0.4cm;
+		border-bottom: 2px solid;
 	}
 	.name_field {
 		height: 0.4cm;
+		border-bottom: 2px solid;
 	}
 	.photo_frame {
 		height: 2.91cm;
+		padding: 2px;
+		border-bottom: 2px solid;
 	}
 	.photo_frame img {
 		max-width: 95%;
@@ -33,92 +42,55 @@ div.stock_card {
 	}
 	.note1_field, .note2_field, .note3_field {
 		text-align: left;
-		font-size: 0.1em;
+		font-size: 0.8em;
 		padding-top: 0.3em;
 		padding-left: 2px;
 	}
 	
-	.overlay_button {
-		position: absolute;
-		width: 20px;
-		margin: 0;
+	&.jewelry {
+		.note1_field, .note2_field, .note3_field, .note4_field {
+			display: none;
+		}
+		table {
+			display: none;
+		}
 		
-		&.move {
-			top: 5px;
-			left: 5px;
+		&.cutout {
+			.photo_frame {
+			  border-bottom: 0;	
+			}
+			.location_field {
+				display: none;
+			}
 		}
-		&.edit {
-			bottom: 5px;
-			right: 40px;
+	}
+	
+	&.watch {
+		table {
+			display: none;
 		}
-		&.delete {
-			bottom: 5px;
-			right: 5px;
-		}
-		&.delete_stock_card {
-			bottom: 5px;
-			right: 80px;
+		
+		&.cutout {
+			.location_field, .note1_field, .note2_field, .note3_field, .note4_field {
+				display: none;
+			}
+			table {
+				display: table;
+			}
 		}
 	}
 	
 	
-}
-
-a.overlay_button {
-	font: bold 12px/1.4em "Lucida Grande", Arial, Verdana;
-	color: white;
-	text-decoration: none;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-	filter: dropshadow(color=#1c1c1c,offx=0,offy=1);
-	display: block;
-	display: inline-block;
-	text-align: center;
-	border: none;
-	padding: 5px 4px;
-	margin-bottom: 10px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
-	-moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
-	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
-	background-clip: padding-box;
-	border-image: initial;
-	/* Coloring */
-	color: #1A1A1A;
-	text-shadow: 0 0 1px white;
-	background: #F9F9F9;
-	background: #F9F9F9 -webkit-gradient( linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .2)),to(transparent));
-	background: #F9F9F9 -moz-linear-gradient( top,rgba(255, 255, 255, .4),transparent);
-	
-	&:hover {
-		background: #F9F9F9 -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .55)),to(transparent));
-		background: #F9F9F9 -moz-linear-gradient( top,rgba(255, 255, 255, .55),transparent);
-		cursor: pointer;
-	}
-	
-	&:active {
-		background:#f9f9f9 -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(0,0,0,.3)),to(rgba(0,0,0,0)));background:#f9f9f9 -moz-linear-gradient( top,rgba(0,0,0,.1),rgba(0,0,0,0));
+	table {
+		width: 104%;
+		margin: -2px;
+		border-collapse: collapse;
+		font-size: 8px;
+		td {
+		  border: 2px solid;
+		  text-align: left;
+		}
 	}
 }
 
-div.stock_cards {
-	width: 95%;
-	display: box;
-	display: -webkit-box;
-	display: -moz-box;
-	box-orient: horizontal;
-	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
-}
 
-
-
-img.photo {
-	max-height: 200px;
-}
-
-.zango_photo_path {
-	display: none;
-}

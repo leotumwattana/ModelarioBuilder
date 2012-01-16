@@ -15,6 +15,14 @@
   <% unless @modelario.sections.empty? %>
       <%= render :partial => 'sections/section', :collection => @modelario.root_sections, :as => :section %>
   <% end %>
+  <div class="legend">
+    <div class="highlighted_items">
+      Color Box represents product within offer
+    </div>
+    <div class="not_highlighted_items">
+      White Box represents product outside offer
+    </div>
+  </div>
 </div>
 
 

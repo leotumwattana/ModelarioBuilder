@@ -28,3 +28,90 @@
 		text-align: right;
 	}
 }
+
+.new_form_box {
+	margin: 0 auto;
+	padding: 0;
+	font: 100% normal Arial, Helvetica, "san-serif";
+	background: #222222;
+	width: 500px;
+	position: relative;
+	top: 50px;
+	border-bottom: 1px double #171717;
+	border-top: 1px double #171717;
+	border-left:1px double #333333;
+	border-right:1px double #333333;
+	
+	input, select, textarea {
+		margin: 0;
+		padding: 0;
+		color: white;
+	}
+	
+	h1 {
+		color: white;
+		font-size: 18px;
+		text-transform: uppercase;
+		padding: 5px 0 5px 5px;
+	}
+	
+	label {
+	//	width: 100%;
+		display: block;
+		background: #1C1C1C;
+		border-top: 1px solid #262626;
+		border-bottom: 1px solid #161712;
+		padding: 10px 0 10px 0;
+	}
+	
+	label span {
+		display: block;
+		color: #bbbbbb;
+		font-size: 12px;
+		float: left;
+		width: 100px;
+		text-align: right;
+		padding: 5px 20px 0 0;
+	}
+	
+	.input_text {
+		padding: 5px;
+		width: 200px;
+		background: #262626;
+		border-bottom: 1px double #171717;
+		border-top: 1px double #171717;
+		border-left:1px double #333333;
+		border-right:1px double #333333;
+	}
+	
+	.message {
+		padding:7px 7px;
+		width:350px;
+		background:#262626;
+		border-bottom: 1px double #171717;
+		border-top: 1px double #171717;
+		border-left:1px double #333333;
+		border-right:1px double #333333;
+		overflow:hidden;
+		height:150px;
+	}
+	
+	.button {
+		margin:0 0 10px 0;
+		padding:4px 7px;
+		background:#CC0000;
+		border:0px;
+		position: relative;
+		top:10px;
+		left:382px;
+		width:100px;
+		border-bottom: 1px double #660000;
+		border-top: 1px double #660000;
+		border-left:1px double #FF0033;
+		border-right:1px double #FF0033;
+	}
+}
+
+.zango_photo_path {
+	display: none;
+}
