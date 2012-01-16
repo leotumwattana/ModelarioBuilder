@@ -1,6 +1,12 @@
 <div class="page">
   <div class="application_menu">
     <%= link_to "New", new_stock_card_path, remote: true %>
+    <div style="float: right; margin-right: 1em;">
+      <%= form_tag stock_cards_path, method: 'get' do %>
+        <%= text_field_tag :q, params[:q] %>
+        <%= submit_tag "Search", name: nil %>
+      <% end %>
+    </div>
   </div>
 	<div class="stock_cards">
   	<%= render :partial => 'stock_card', :collection => @stock_cards, :as => 'stock_card' %>
