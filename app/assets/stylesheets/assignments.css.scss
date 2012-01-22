@@ -1,4 +1,14 @@
 li.assignment {
-	float: left;
-	margin-bottom: 4px;
+  float: left;
+  margin-bottom: 4px;
+
+  &.ui-sortable-helper {
+    background: white;
+    -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+    box-shadow: .125em 0 1em rgba(0, 0, 0, 0.8);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }
