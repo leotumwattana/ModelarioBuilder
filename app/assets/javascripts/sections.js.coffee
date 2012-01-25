@@ -9,9 +9,8 @@ jQuery ->
 
 # also moved below code to sections/new.js.erb & sections/edit.js.erb for ajax forms
 jQuery ->
-	$('#section_sku_tokens').tokenInput('/stock_cards.json', { 
-		crossDomain: false,
-		theme: 'facebook'
-		prePopulate: $('#section_sku_tokens').data('pre')
-	});
-	
+  $('#section_sku_tokens').tokenInput('/stock_cards.json', { 
+    crossDomain: false,
+    theme: 'facebook'
+    prePopulate: $('#section_sku_tokens').data('pre')
+  });

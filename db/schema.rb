@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120116063153) do
+ActiveRecord::Schema.define(:version => 20120123052449) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "section_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20120116063153) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "row_order"
   end
 
   create_table "color_themes", :force => true do |t|

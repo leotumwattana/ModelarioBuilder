@@ -23,6 +23,7 @@ ModelarioBuilder::Application.routes.draw do
   resources :sectionings
   resources :stock_cards
   resources :assignments do
+    collection { post :sort_move }
     collection { post :sort }
   end
   resources :offers

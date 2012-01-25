@@ -1,6 +1,14 @@
 class AssignmentsController < ApplicationController
   respond_to :html, :xml, :js
   
+  def sort_move
+    assignment = Assignment.find(params[:assignment_id])
+    assignment.section_id = params[:section_id]
+    assignment.row_order_position = params[:position].to_i
+    assignment.save
+    render nothing: true
+  end
+  
   def sort
     params[:assignment].each_with_index do |id, index|
       Assignment.update_all({position: index+1}, {id: id})

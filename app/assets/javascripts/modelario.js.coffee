@@ -3,29 +3,21 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('.sortable').sortable(
-    handle: '.move'
-    connectWith: '.sortable'
-    update: ->
-      #$.post($(this).data('update-url'), $(this).sortable('serialize'))
-  );
-  $('.vertical_sortable').sortable(
-    axis: 'y'
-    update: ->
-      #$.post($(this).data('update-url'), $(this).sortable('serialize'))
-  );
-
+  $('.section').live('sortstop', (event, ui) -> 
+    $.post($(this).data('assignment-update-url'), {section_id: this.id, assignment_id: $(ui.item).attr('id').split('_')[1], position: ui.item.index()})
+    event.stopImmediatePropagation())
+  $('.sortable').sortable(handle: '.move', connectWith: '.sortable')
+  $('.vertical_sortable').sortable(axis: 'y')
+  
 jQuery ->
   $('.resizable').resizable()
   $('div.section').resizable()
-  
+
   $('div.section').each( (index, section) ->
     section_height = $(section).height()
-    $(section).children('.title').children('span').width(section_height).css('text-align','center')
-  )
+    $(section).children('.title').children('span').width(section_height).css('text-align','center'))
 
   $('div.section').bind('resize', ->
     $('div.section').each( (index, section) ->
       section_height = $(section).height()
-      $(section).children('.title').children('span').width(section_height).css('text-align','center')
-    ))
+      $(section).children('.title').children('span').width(section_height).css('text-align','center')))

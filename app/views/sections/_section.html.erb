@@ -1,4 +1,4 @@
-<div class="section">
+<div id="<%= section.id %>" class="section" data-assignment-update-url="<%= sort_move_assignments_url %>">
   <div id="section_<%= section.id %>" class="title">
     <span><%= section.title %></span>
   </div>
@@ -15,15 +15,15 @@
             <%= render :partial => 'sections/section', :object => section, :as => :section %>
           <% end %>
         <% end %>
-      </ul>
+      </ul>         
     <% end %>
     <div class="stock_cards">
       <div class="spacer"></div>
-      <% unless section.assignments.empty? then %>
-        <ul class="sortable" data-update-url="<%= sort_assignments_url %>" >
-          <%= render :partial => 'assignments/assignment', :collection => section.assignments.order('position'), :as => :assignment %>
+        <ul class="sortable stock_card_list">
+          <% unless section.assignments.empty? then %>
+            <%= render :partial => 'assignments/assignment', :collection => section.assignments.rank(:row_order), :as => :assignment %>
+          <% end %>
         </ul>
-      <% end %>
     </div>
   </div>
 </div>
