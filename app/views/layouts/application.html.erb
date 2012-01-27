@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1 class="application_title noprint">
-  <%= link_to 'Modelario Builder', root_path %>
-</h1>
+  <header>
+    <h1 class="noprint"><%= link_to 'Modelario Builder', root_path %></h1>
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
-<div id="popup" class="hidden"></div>
-<div class="footer"></div>
+  <div id="popup" class="hidden"></div>
+  <footer></footer>
 </body>
 </html>
