@@ -8,6 +8,8 @@
 
 /* This file is used only as a manifest to import all other scss files.  Look at main.css.scss for application wide styles */
 
+@import "fontfaces.css.scss";
+@import "global.css.scss";
 @import "variables.css.scss";
 @import "mixins.css.scss";
 @import "misc.css.scss";

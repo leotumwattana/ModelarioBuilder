@@ -1,19 +1,22 @@
-<div class="form small">
-  <h1>New Section</h1>
+<section class="form small center clearfix">
+  <heading>
+    <h1>New Section</h1>
+  </heading>
+  
   <%= form_for [@modelario, @section], do |f| %>
-    <label>Title</label>
-		<%= f.text_field :title %> <br>
-    
-		<%= f.hidden_field :root, :value => params[:root] == 'true' ? '1' : '0' %>
+    <fieldset>
+      <label>Title</label>
+      <%= f.text_field :title %>
+    </fieldset>  
+    <fieldset>
+      <label>Stock Cards</label>
+      <%= f.text_field :sku_tokens %>
+    </fieldset>
+    <%= f.submit 'Create', :class => 'button' %>
+    <%= f.hidden_field :root, :value => params[:root] == 'true' ? '1' : '0' %>
     <% if params[:subsectionof] %>
       <%= hidden_field_tag :subsectionof, params[:subsectionof] %>
     <% end %>
-
-		<label>Stock Cards</label>
-		<%= f.text_field :sku_tokens %>
-		
-    <div class="button_bar">
-      <%= f.submit 'Create' %>
-    </div>
   <% end %>
-</div>
+  
+</section>

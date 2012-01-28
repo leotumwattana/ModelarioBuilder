@@ -1,18 +1,21 @@
-<div class="form small">
-  <h1>Edit Section</h1>
-  <%= form_for [@modelario, @section] do |f| %>
-    <label>Title</label>
-		<%= f.text_field :title %> <br>
-
+<section class="form small center">
+  <heading>
+    <h1>Edit Section</h1>
+  </heading>
+  <%= form_for [@modelario, @section] do |f| %>  
+    <fieldset>
+      <label>Title</label>
+      <%= f.text_field :title %> <br>
+    </fieldset>
+    <fieldset>
+      <label>Stock Cards</label>
+      <%= f.text_field :sku_tokens, "data-pre" => @section.stock_cards.to_json %>
+    </fieldset>
     <% if params[:subsectionof] %>
       <%= hidden_field_tag :subsectionof, params[:subsectionof] %>
     <% end %>
-
-		<label>Stock Cards</label>
-		<%= f.text_field :sku_tokens, "data-pre" => @section.stock_cards.to_json %>
-
     <div class="button_bar">
       <%= f.submit 'Update' %>
     </div>
   <% end %>
-</div>
+</section>

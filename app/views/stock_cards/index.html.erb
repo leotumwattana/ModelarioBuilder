@@ -3,7 +3,7 @@
     <%= link_to "New", new_stock_card_path, remote: true %>
     <div style="float: right; margin-right: 1em;">
       <%= form_tag stock_cards_path, method: 'get' do %>
-        <%= text_field_tag :q, params[:q] %>
+        <%= search_field_tag :q, params[:q] %>
         <%= submit_tag "Search", name: nil %>
       <% end %>
     </div>

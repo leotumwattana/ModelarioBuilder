@@ -1,10 +1,15 @@
-<div class="form small">
-	<h1>Stock Card - Editor</h1>
-	<%= form_for @modelario do |f| %>
-	  <%= f.text_field :title %>
-	  <%= collection_select(:modelario, :color_theme_id, ColorTheme.all, :id, :name) %>
-		<div class="button_bar">
-      <%= f.submit 'Update' %>
-    </div>
-	<% end %>
-</div>
+<section class="clear_border tiny">
+  <div class="form clearfix">
+    <heading>
+      <h1>Modelario</h1>
+    </heading>
+    <%= form_for @modelario do |f| %>
+      <fieldset>
+        <label>Modelario Name</label>
+        <%= f.text_field :title %>
+        <%= collection_select(:modelario, :color_theme_id, ColorTheme.all, :id, :name) %>
+      </fieldset>
+      <%= f.submit 'Update', :class => 'button' %>
+    <% end %>
+  </div>
+</section>

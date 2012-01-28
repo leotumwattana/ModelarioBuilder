@@ -1,30 +1,51 @@
 <%= form_for @stock_card, do |f| %>
-  <div class="clear_frame">
-  <div class="form clearfix">
-    <h1>New Stock Card :</h1>
-    <div class="left">
-      <label>SKU</label><br><%= f.text_field :sku, :class => 'sku input_text' %><br>
-      <label>Name</label><br><%= f.text_field :name, :class => 'input_text' %><br>
-      <label>Note 1</label><br><%= f.text_field :note1 %><br>
-      <label>Note 2</label><br><%= f.text_field :note2 %><br>
-      <label>Note 3</label><br><%= f.text_field :note3 %><br>
-    </div>
-    <div class="left">
-      <label>Photo</label><br><div class="photo_frame"><%= image_tag @stock_card.photo, :class => 'photo' %></div><br>
-      <label>Photo SKU</label><br><%= text_field_tag :photo_sku %><br>
-    </div>
-    <div class="right">
-      <div class="checkboxes">
-        <%= hidden_field_tag "stock_card[offer_ids][]", nil %>
-        <% Offer.order(:name).each do |offer| %>
-          <div class="checkbox_frame">
-          <%= check_box_tag "stock_card[offer_ids][]", offer.id, @stock_card.offer_ids.include?(offer.id), id: dom_id(offer) %>
-          <%= label_tag dom_id(offer), offer.name %>
-          </div>
-        <% end %>
+  <section class="clear_border wide">
+    <div class="form clearfix">
+      <h1>New Stock Card :</h1>
+      <div class="left">
+        <fieldset>
+          <label>SKU</label>
+          <%= f.text_field :sku, :class => 'sku input_text', placeholder: 'Q113K0' %>
+        </fieldset>
+        <fieldset>
+          <label>Name</label>
+          <%= f.text_field :name, :class => 'input_text', placeholder: 'TB in Black GMT' %>
+        </fieldset>
+        <fieldset>
+          <label>Note 1</label>
+          <%= f.text_field :note1, placeholder: 'R15588 - Bl. Rub Dam.(L)' %>
+        </fieldset>
+        <fieldset>
+          <label>Note 2</label>
+          <%= f.text_field :note2, placeholder: 'R10209 - Pin Buckle (XL)' %>
+        </fieldset>
+        <fieldset>
+          <label>Note 3</label>
+          <%= f.text_field :note3, placeholder: 'etc' %>
+        </fieldset>
       </div>
-      <%= f.submit 'Create', class: 'button' %>
+      <div class="left">
+        <fieldset>
+          <label>Photo</label>
+          <div class="photo_frame"><%= image_tag @stock_card.photo, :class => 'photo' %></div>
+        </fieldset>
+        <fieldset>  
+          <label>Photo SKU</label>
+          <%= text_field_tag :photo_sku, nil, placeholder: 'Q113K0' %>
+        </fieldset>
+      </div>
+      <div class="right">
+        <div class="checkboxes">
+          <%= hidden_field_tag "stock_card[offer_ids][]", nil %>
+          <% Offer.order(:name).each do |offer| %>
+            <div class="checkbox_frame">
+            <%= check_box_tag "stock_card[offer_ids][]", offer.id, @stock_card.offer_ids.include?(offer.id), id: dom_id(offer) %>
+            <%= label_tag dom_id(offer), offer.name %>
+            </div>
+          <% end %>
+        </div>
+        <%= f.submit 'Create', class: 'button' %>
+      </div>
     </div>
-  </div>
-  </div>
+  </section>
 <% end %>
