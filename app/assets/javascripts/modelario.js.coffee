@@ -8,6 +8,7 @@ jQuery ->
     event.stopImmediatePropagation())
   $('.sortable').sortable(handle: '.move', connectWith: '.sortable')
   $('.vertical_sortable').sortable(axis: 'y')
+  $('.sections_sortable').sortable(axis: 'y', items: 'li')
   
 jQuery ->
   $('.resizable').resizable()

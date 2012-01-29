@@ -46,12 +46,6 @@ div.section {
 		padding: 0;
     min-width: 100px;
     min-height: 100px;
-//		display: box;
-//		display: -webkit-box;
-//		display: -moz-box;
-//		box-orient: horizontal;
-//		-webkit-box-orient: horizontal;
-//		-moz-box-orient: horizontal;
 		
 		&.vertical_sortable {
 			@include flex_box_vertical;

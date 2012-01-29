@@ -12,9 +12,11 @@
   <div class="modelario_title">
     <%= @modelario.title %>
   </div>
-  <% unless @modelario.sections.empty? %>
-      <%= render :partial => 'sections/section', :collection => @modelario.root_sections, :as => :section %>
-  <% end %>
+  <ul class="sections_sortable">
+    <% unless @modelario.sections.empty? %>
+        <%= render :partial => 'sections/section', :collection => @modelario.root_sections, :as => :section %>
+    <% end %>
+  </ul>
   <div class="legend">
     <div class="highlighted_items">
       Color Box represents product within offer
