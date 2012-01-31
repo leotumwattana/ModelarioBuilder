@@ -9,35 +9,43 @@ div.section {
   margin: 10px 0;
   padding: 0;
   min-height: 100px;
-  padding-top: -2px; /* */
+  padding-left: 3em;
   
-  display: box;
-  display: -webkit-box;
-  display: -moz-box;
+//  display: box;
+//  display: -webkit-box;
+//  display: -moz-box;
   
   div.title {
     margin: 0;
     padding: 0;
-    background: $blue;
 //    overflow: hidden;
-    width: 3em;
-    min-height: 4cm;
-    position:relative;
+    width: 4cm;
+    height: 3em;
+    position: absolute;
     cursor: pointer;
-    span {
-      display: block;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      text-align: center;
-      white-space: nowrap;
-      margin-left: 2em;
-      color: white;
-      -moz-transform-origin: bottom left;
-      -webkit-transform-origin: bottom left;
-      -webkit-transform: rotate(-90deg); 
-      -moz-transform: rotate(-90deg);
-    }
+    -moz-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -webkit-transform: rotate(-90deg) translate(0, 3em); 
+    -moz-transform: rotate(-90deg) translate(0, 3em);
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 3em;
+    background: $blue;
+  }
+  
+  div.section_menu {
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin: 0;
+    background: $menu_gray;
+    border: 1px solid $menu_border_gray;
+    overflow: hidden;
+    width: 4em;
+    padding: 10px;
+    border: 1px solid $menu_border_gray;
   }
   
   ul {
@@ -55,16 +63,6 @@ div.section {
   li {
     text-decoration: none;
     display: box;
-  }
-  
-  div.section_menu {
-    margin: 0;
-    background: $menu_gray;
-    overflow: hidden;
-    width: 4em;
-    padding: 10px;
-    min-height: 4cm;
-    border: 1px solid $menu_border_gray;
   }
   
   /* Content can include subsections & stock_cards */

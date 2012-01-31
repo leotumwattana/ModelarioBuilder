@@ -19,6 +19,4 @@ jQuery ->
     $(section).children('.title').children('span').width(section_height).css('text-align','center'))
 
   $('div.section').bind('resize', ->
-    $('div.section').each( (index, section) ->
-      section_height = $(section).height()
-      $(section).children('.title').children('span').width(section_height).css('text-align','center')))
+    $(this).children('.title').width($(this).height()))

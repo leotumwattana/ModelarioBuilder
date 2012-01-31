@@ -1,7 +1,7 @@
 <li>
 <div id="<%= section.id %>" class="section" data-assignment-update-url="<%= sort_move_assignments_url %>">
   <div id="section_<%= section.id %>" class="title">
-    <span><%= section.title %></span>
+    <div><%= section.title %></div>
   </div>
   <div id="section_<%= section.id %>_menu" class="section_menu hidden">
     <%= link_to '+ Section', new_modelario_section_path(section.modelario, :subsectionof => section.id), :class => 'overlay_button' %>

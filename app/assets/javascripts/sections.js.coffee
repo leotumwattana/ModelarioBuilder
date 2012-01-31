@@ -14,3 +14,9 @@ jQuery ->
     theme: 'facebook'
     prePopulate: $('#section_sku_tokens').data('pre')
   });
+  
+jQuery ->
+  $('section div.title').each (index, ele) ->
+    $(this).css('width', $(this).parent().height())
+  # $('section div.section_menu').each (index, ele) ->
+  #   $(this).css('height', $(this).parent().height())
