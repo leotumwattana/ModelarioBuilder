@@ -12,6 +12,7 @@ class ModelariosController < ApplicationController
   def new
     @modelario = Modelario.new
     respond_with @modelario
+    session[:return_to] = requrest.referer
   end
   def create
     @modelario = Modelario.new(params[:modelario])
