@@ -9,7 +9,7 @@ div.section {
   margin: 10px 0;
   padding: 0;
   min-height: 100px;
-  padding-left: 3em;
+  padding-left: 2.5em;
   
 //  display: box;
 //  display: -webkit-box;
@@ -18,19 +18,19 @@ div.section {
   div.title {
     margin: 0;
     padding: 0;
-//    overflow: hidden;
+    overflow: hidden;
     width: 4cm;
-    height: 3em;
+    height: 2.6em;
     position: absolute;
     cursor: pointer;
     -moz-transform-origin: bottom left;
     -webkit-transform-origin: bottom left;
-    -webkit-transform: rotate(-90deg) translate(0, 3em); 
-    -moz-transform: rotate(-90deg) translate(0, 3em);
+    -webkit-transform: rotate(-90deg) translate(0, 2.6em); 
+    -moz-transform: rotate(-90deg) translate(0, 2.6em);
     bottom: 0;
     left: 0;
     text-align: center;
-    line-height: 3em;
+    line-height: 2.6em;
     background: $blue;
   }
   
@@ -43,7 +43,7 @@ div.section {
     background: $menu_gray;
     border: 1px solid $menu_border_gray;
     overflow: hidden;
-    width: 4em;
+    width: 2.6em;
     padding: 10px;
     border: 1px solid $menu_border_gray;
   }

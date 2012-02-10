@@ -1,8 +1,9 @@
-window.show_form = (snippet) ->
+window.show_form = (snippet, first_focus_element = null) ->
   $('#popup').html(snippet)
   $('#popup section.form').hide()
   $('#popup').fadeIn 'fast', ->
-    $('#popup section.form').slideDown('fast')
+    $('#popup section.form').slideDown 'fast', ->
+      $(first_focus_element).focus()
   
   # Should I remove this out?
   $('#section_sku_tokens').tokenInput('/stock_cards.json', { 

@@ -12,7 +12,7 @@ jQuery ->
   )
   $('#stock_card_sku').live('change',
     ->
-      $('#photo_sku').val($('#stock_card_sku').val()).trigger('change')
+      $('#photo_sku').val($('#stock_card_sku').val().substring(0,6)).trigger('change')
   )
   
 jQuery ->
