@@ -16,6 +16,7 @@ ModelarioBuilder::Application.routes.draw do
   #   resources :products
   resources :modelarios do
     resources :sections do
+      collection { post :sort_move }
       collection { post :sort }
     end
   end

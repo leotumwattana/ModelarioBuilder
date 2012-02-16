@@ -9,12 +9,12 @@ class AssignmentsController < ApplicationController
     render nothing: true
   end
   
-  def sort
-    params[:assignment].each_with_index do |id, index|
-      Assignment.update_all({position: index+1}, {id: id})
-    end
-    render nothing: true
-  end
+  # def sort
+  #   params[:assignment].each_with_index do |id, index|
+  #     Assignment.update_all({position: index+1}, {id: id})
+  #   end
+  #   render nothing: true
+  # end
   
   def new
     @assignment = Assignment.new

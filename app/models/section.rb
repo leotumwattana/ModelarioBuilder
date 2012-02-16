@@ -8,6 +8,10 @@ class Section < ActiveRecord::Base
   has_many :stock_cards, :through => :assignments
   attr_reader :sku_tokens
   
+  acts_as_list
+  include RankedModel
+  ranks :row_order, :with_same => :modelario_id
+  
   def sku_tokens=(ids)
     self.stock_card_ids = ids.split(",")
   end

@@ -1,6 +1,14 @@
 class SectionsController < ApplicationController
   respond_to :html, :xml, :js
   
+  def sort_move
+    section = Section.find(params[:section_id])
+    section.modelario_id = params[:modelario_id]
+    section.row_order_position = params[:position].to_i
+    section.save
+    render nothing: true
+  end
+  
   def sort
     params[:section].each_with_index do |id, index|
       Section.update_all({position: index+1}, {id: id})

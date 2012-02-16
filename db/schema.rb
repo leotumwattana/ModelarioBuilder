@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120123052449) do
+ActiveRecord::Schema.define(:version => 20120210040445) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "section_id"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20120123052449) do
     t.integer  "modelario_id"
     t.integer  "position"
     t.boolean  "root",         :default => false
+    t.integer  "row_order"
   end
 
   create_table "sections_stock_cards", :id => false, :force => true do |t|
