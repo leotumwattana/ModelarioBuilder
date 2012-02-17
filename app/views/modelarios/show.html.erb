@@ -1,6 +1,9 @@
 <!-- Modelario Show Template -->
 
-<div class="modelario A3 <%= @modelario.color_theme.name.downcase%>" data-assignment-update-url="<%= sort_move_assignments_url %>" data-sections-update-url="<%= sort_move_modelario_sections_url %>">
+<div class="modelario A3 <%= @modelario.color_theme.name.downcase%>" 
+  data-assignment-update-url="<%= sort_move_assignments_url %>"  
+  data-sections-update-url="<%= sort_move_modelario_sections_url @modelario %>">
+  
   <div class="application_menu noprint">
     <%= link_to 'Open', modelarios_path %>
     <%= link_to 'Edit', edit_modelario_path(@modelario), remote: true %>
@@ -15,7 +18,7 @@
   </div>
   <ul class="root sections_sortable">
     <% unless @modelario.sections.empty? %>
-        <%= render :partial => 'sections/section', :collection => @modelario.root_sections, :as => :section %>
+        <%= render :partial => 'sections/section', :collection => @modelario.root_sections.rank(:row_order), :as => :section %>
     <% end %>
   </ul>
   <div class="legend">

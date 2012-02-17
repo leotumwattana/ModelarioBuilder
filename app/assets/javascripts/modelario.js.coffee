@@ -15,17 +15,20 @@ jQuery ->
       event.stopImmediatePropagation()
   )
   
-  # For sorting root sections
+  # For sorting sections
   $('div.modelario').delegate('.sections_sortable', 'sortstop', (event, ui) ->
     item_type = $(ui.item).attr('id').split('_')[0]
-    section_update_path = $('div.modelario').data('sections-update-url')
+    section_update_url = $('div.modelario').data('sections-update-url')
     
     if item_type == "section"
       section_id = $(ui.item).attr('id').split('_')[1]
       section_position = ui.item.index()
-      parent_section_id = $(ui.item).parent('ul').attr('class')
       
-      alert(parent_section_id)
+      if typeof($(ui.item).parents('li').first().attr('id')) != 'undefined'
+        parent_section_id = $(ui.item).parents('li').first().attr('id').split('_')[1]
+      
+      $.post(section_update_url, {section_id: section_id, position: section_position})
+      
       # Send to section_update_url
         # section_id
         # position as ui.item.index()

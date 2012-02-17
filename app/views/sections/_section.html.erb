@@ -11,7 +11,7 @@
   <div class="content">
     <% unless section.subsections.empty? then %>
       <ul class="vertical_sortable" data-update-url="<%= sort_modelario_sections_url(section.modelario) %>">
-        <% section.subsections.order("position").each do |section| %>
+        <% section.subsections.rank(:row_order).each do |section| %>
           <%= content_tag_for :li, section do %>
             <%= render :partial => 'sections/section', :object => section, :as => :section %>
           <% end %>
