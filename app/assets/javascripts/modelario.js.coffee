@@ -28,11 +28,6 @@ jQuery ->
         parent_section_id = $(ui.item).parents('li').first().attr('id').split('_')[1]
       
       $.post(section_update_url, {section_id: section_id, position: section_position})
-      
-      # Send to section_update_url
-        # section_id
-        # position as ui.item.index()
-        # parent_section_id if any
   )
 
   #$('body').delegate('.section', 'sortstop', (event, ui) ->
