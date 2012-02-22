@@ -37,4 +37,5 @@ gem 'ranked-model'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'cucumber-rails'
 end
