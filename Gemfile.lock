@@ -93,7 +93,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.17.2)
+    mocha (0.10.4)
+      metaclass (~> 0.0.1)
     multi_json (1.0.4)
     nokogiri (1.5.0)
     pdfkit (0.5.2)
@@ -183,6 +186,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   launchy
+  mocha
   pdfkit
   rails (= 3.2.0)
   ranked-model

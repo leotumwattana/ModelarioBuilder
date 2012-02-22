@@ -47,4 +47,5 @@ group :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'guard-rspec'
+  gem 'mocha'
 end
