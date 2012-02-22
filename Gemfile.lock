@@ -148,6 +148,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_list
   best_in_place
+  capybara
   coffee-rails (~> 3.2.1)
   cucumber-rails
   jquery-rails
