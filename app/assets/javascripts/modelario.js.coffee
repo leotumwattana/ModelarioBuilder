@@ -54,3 +54,10 @@ jQuery ->
 jQuery ->
   $('.vertical_sortable').sortable(axis: 'y')
   $('.sections_sortable').sortable(axis: 'y', items: 'li', handle: '.title')
+  
+# Modelario/Cutout View Button
+jQuery ->
+  $('#modelario_cutout_view_button').click( (event) ->
+    $('div.modelario').toggleClass('stock_card_cutout_mode')
+    $('div.stock_card').toggleClass('cutout')
+  )

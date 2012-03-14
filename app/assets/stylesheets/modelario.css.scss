@@ -4,97 +4,97 @@
 
 
 @mixin highlight($color) {
-	.sku_field {
-		color: white;
-		background: $color;
-	}
-	.name_field {
-		color: white;
-		background: $color;
-	}
-	.note1_field, .note2_field, .note3_field {
-		color: white;
-		background: $color;
-	}
+  .sku_field {
+    color: white;
+    background: $color;
+  }
+  .name_field {
+    color: white;
+    background: $color;
+  }
+  .note1_field, .note2_field, .note3_field {
+    color: white;
+    background: $color;
+  }
 }
 @mixin stock_card_color_and_border($base_color, $border_size: 2px) {
-	/* Default color settings */
-	color: white;
-	border-color: $base_color;
-	margin-right: -$border_size;
-	margin-bottom: -$border_size;
-	.sku_field {
-		color: $base_color;
-		background: white;
-		border-bottom: $border_size solid $base_color;
-	}
-	.name_field {
-		color: $base_color;
-		background: white;
-		border-bottom: $border_size solid $base_color;
-	}
-	.photo_frame {
-		border-color: $base_color;
-	}
-	.location_field {
-		color: $base_color;
-/*		border-top: $border_size solid $base_color;*/
-	}
-	.note1_field, .note2_field, .note3_field {
-		color: $base_color;
-		background: white;
-	}
-	table {
-		td {
-		  border-color: $base_color;
-			color: $base_color;
-			text-align: left;
-		}
-	}
-	
-	/* Highlight color settings */
-	&.highlight {
-		@include highlight($base_color)
-	}
+  /* Default color settings */
+  color: white;
+  border-color: $base_color;
+  margin-right: -$border_size;
+  margin-bottom: -$border_size;
+  .sku_field {
+    color: $base_color;
+    background: white;
+    border-bottom: $border_size solid $base_color;
+  }
+  .name_field {
+    color: $base_color;
+    background: white;
+    border-bottom: $border_size solid $base_color;
+  }
+  .photo_frame {
+    border-color: $base_color;
+  }
+  .location_field {
+    color: $base_color;
+/*    border-top: $border_size solid $base_color;*/
+  }
+  .note1_field, .note2_field, .note3_field {
+    color: $base_color;
+    background: white;
+  }
+  table {
+    td {
+      border-color: $base_color;
+      color: $base_color;
+      text-align: left;
+    }
+  }
+  
+  /* Highlight color settings */
+  &.highlight {
+    @include highlight($base_color)
+  }
 }
 @mixin modelario_color($color) {
-	div.modelario_title {
-		color: white;
-		background: $color;
-		border-color: $color;
-	}
-	div.section {
-		div.title {
-			color: white;
-			background: $color;
-		}
-	}
-	div.stock_card {
-		@include stock_card_color_and_border($color)
-	}
-	div.legend {
-		position: absolute;
-		bottom: 30px;
-		right: 10px;
-		
-		div {
-			border: 2px solid $color;
-			padding: 2px 10px;
-		  float: left;
-			text-align: center;
-			font-size: 0.5em;
-		}
-		
-		div.highlighted_items {
-			background: $color;
-			color: white;
-		}
-		
-		div.not_highlighted_items {
-			background: white;
-			color: $color;
-		}
-	}
+  div.modelario_title {
+    color: white;
+    background: $color;
+    border-color: $color;
+  }
+  div.section {
+    div.title {
+      color: white;
+      background: $color;
+    }
+  }
+  div.stock_card {
+    @include stock_card_color_and_border($color)
+  }
+  div.legend {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    
+    div {
+      border: 2px solid $color;
+      padding: 2px 10px;
+      float: left;
+      text-align: center;
+      font-size: 0.5em;
+    }
+    
+    div.highlighted_items {
+      background: $color;
+      color: white;
+    }
+    
+    div.not_highlighted_items {
+      background: white;
+      color: $color;
+    }
+  }
 }
 
 ul.sections_sortable {
@@ -113,88 +113,94 @@ ul.sections_sortable {
 
 /* Modelario Index Action */
 ul.modelarios {
-	
-	li.modelario {
-		display: block;
-		width: 600px;
-		height: 40px;
-		line-height: 40px;
-		padding: 0 1em;
-		
-		/* Borders */
-		-webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
-		-moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
-		box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
+  
+  li.modelario {
+    display: block;
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+    
+    /* Borders */
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),inset 0 2px 0 rgba(255,255,255,.25);
 
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding-box;
-		background-clip: padding-box;
-		
-		color: #1A1A1A;
-		text-shadow: 0 0 1px white;
-		background: $white_button_background_color;
-		background: $white_button_background_color -webkit-gradient( linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .2)),to(transparent));
-		background: $white_button_background_color -moz-linear-gradient( top,rgba(255, 255, 255, .4),transparent);
-		
-		&:hover {
-			background: $white_button_background_color -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .55)),to(transparent));
-			background: $white_button_background_color -moz-linear-gradient( top,rgba(255, 255, 255, .55),transparent);
-			cursor: pointer;
-		}
-		
-		&:active {
-			background: $white_button_background_color -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(0,0,0,.3)),to(rgba(0,0,0,0))); background:$white_button_background_color -moz-linear-gradient( top,rgba(0,0,0,.1),rgba(0,0,0,0));
-		}
-	}
-	
-	a {
-		color: black;
-	}
-	
-	/* link for the main part of the button */
-	a:first-child {
-		display: inline-block;
-		font-weight: bold;
-		min-width: 300px;
-	}
-	
-	/* for the small action elements to the right */
-	a:not(:first-child){
-		float: right;
-		font-size: 0.7em;
-		margin: 0 0.5em;
-	}
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    
+    color: #1A1A1A;
+    text-shadow: 0 0 1px white;
+    background: $white_button_background_color;
+    background: $white_button_background_color -webkit-gradient( linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .2)),to(transparent));
+    background: $white_button_background_color -moz-linear-gradient( top,rgba(255, 255, 255, .4),transparent);
+    
+    &:hover {
+      background: $white_button_background_color -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(255, 255, 255, .55)),to(transparent));
+      background: $white_button_background_color -moz-linear-gradient( top,rgba(255, 255, 255, .55),transparent);
+      cursor: pointer;
+    }
+    
+    &:active {
+      background: $white_button_background_color -webkit-gradient(linear,0% 0%,0% 100%,from(rgba(0,0,0,.3)),to(rgba(0,0,0,0))); background:$white_button_background_color -moz-linear-gradient( top,rgba(0,0,0,.1),rgba(0,0,0,0));
+    }
+  }
+  
+  a {
+    color: black;
+  }
+  
+  /* link for the main part of the button */
+  a:first-child {
+    display: inline-block;
+    font-weight: bold;
+    min-width: 300px;
+  }
+  
+  /* for the small action elements to the right */
+  a:not(:first-child){
+    float: right;
+    font-size: 0.7em;
+    margin: 0 0.5em;
+  }
 }
 
 /* Styling of Modelarios */
 div.modelario {
-	
-	position: relative;
-	
-	div.modelario_title {
-		//display: box;
-		position: relative;
-		height: 1.5cm;
-		font-size: 1.7em;
-		text-align: center;
-		margin-bottom: .5em;
-		padding: 0;
-		line-height: 2em;
-	}
-	
-	/* When blue */
-	&.blue {
-		@include modelario_color($blue)
-	}
-	/* When red */
-	&.red {
-		@include modelario_color($red)
-	}
+  
+  position: relative;
+  
+  div.modelario_title {
+    //display: box;
+    position: relative;
+    height: 1.5cm;
+    font-size: 1.7em;
+    text-align: center;
+    margin-bottom: .5em;
+    padding: 0;
+    line-height: 2em;
+  }
+  
+  /* When blue */
+  &.blue {
+    @include modelario_color($blue)
+  }
+  /* When red */
+  &.red {
+    @include modelario_color($red)
+  }
+  
+  &.stock_card_cutout_mode {
+    div.title {
+      visibility: hidden;
+    }
+  }
 }
 
 div.spacer {
-	margin: 0;
-	border: 0;
-	padding: 0;
-	width: 10px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 10px;
 }

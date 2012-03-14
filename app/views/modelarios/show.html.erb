@@ -11,6 +11,7 @@
     <%= link_to 'Add Section', new_modelario_section_path(@modelario, :root => true), remote: true %>
     <%= link_to 'New Stock Card', new_stock_card_path, remote: true %>
     <%= link_to 'Print', modelario_path(@modelario, format: 'pdf') %>
+    <%= link_to 'Modelario/Cutout', '#', class: "button", id: 'modelario_cutout_view_button'%>
     <%= render :partial => 'offers/offers' %>
   </div>
   <div class="modelario_title">

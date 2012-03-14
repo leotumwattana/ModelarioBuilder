@@ -3,95 +3,95 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.stock_cards {
-	width: 95%;
+  width: 95%;
 }
 
 div.stock_card {
-	margin-right: -2px;
-	margin-bottom: 4px;
-	padding: 0;
-	text-align: center;
-	color: black;
-	font-size: 0.7em;
-	width: 3.2cm;
-	border: 2px solid;
-	min-height: 4cm;
-	float: left;
-	position: relative;
-	background: white;
-	
-	.sku_field {
-		height: 0.4cm;
-		border-bottom: 2px solid;
-	}
-	.name_field {
-		height: 0.4cm;
-		border-bottom: 2px solid;
-	}
-	.photo_frame {
-		height: 2.91cm;
-		padding: 2px;
-		border-bottom: 2px solid;
-	}
-	.photo_frame img {
-		max-width: 95%;
-		max-height: 95%;
-	}
-	.location_field {
-		text-align: left;
-		padding-left: 2px;
-		border-bottom: 2px solid;
-	}
-	.note1_field, .note2_field, .note3_field {
-		text-align: left;
-		font-size: 0.8em;
-		padding-top: 0.3em;
-		padding-left: 2px;
-	}
-	
-	&.jewelry {
-	  width: 2.9cm;
-		.note1_field, .note2_field, .note3_field, .note4_field {
-			display: none;
-		}
-		table {
-			display: none;
-		}
-		
-		&.cutout {
-			.photo_frame {
-			  border-bottom: 0;	
-			}
-			.location_field {
-				display: none;
-			}
-		}
-	}
-	
-	&.watch {
-		table {
-			display: none;
-		}
-		
-		&.cutout {
-			.location_field, .note1_field, .note2_field, .note3_field, .note4_field {
-				display: none;
-			}
-			table {
-				display: table;
-			}
-		}
-	}
-	
-	
-	table {
-		width: 104%;
-		margin: -2px;
-		border-collapse: collapse;
-		font-size: 8px;
-		td {
-		  border: 2px solid;
-		  text-align: left;
-		}
-	}
+  margin-right: -2px;
+  margin-bottom: 4px;
+  padding: 0;
+  text-align: center;
+  color: black;
+  font-size: 0.7em;
+  width: 3.2cm;
+  border: 2px solid;
+  min-height: 4cm;
+  float: left;
+  position: relative;
+  background: white;
+  
+  .sku_field {
+    height: 0.4cm;
+    border-bottom: 2px solid;
+  }
+  .name_field {
+    height: 0.4cm;
+    border-bottom: 2px solid;
+  }
+  .photo_frame {
+    height: 2.91cm;
+    padding: 2px;
+    border-bottom: 2px solid;
+  }
+  .photo_frame img {
+    max-width: 95%;
+    max-height: 95%;
+  }
+  .location_field {
+    text-align: left;
+    padding-left: 2px;
+    border-bottom: 2px solid;
+  }
+  .note1_field, .note2_field, .note3_field {
+    text-align: left;
+    font-size: 0.8em;
+    padding-top: 0.3em;
+    padding-left: 2px;
+  }
+  
+  &.jewelry {
+    width: 2.9cm;
+    .note1_field, .note2_field, .note3_field, .note4_field {
+      display: none;
+    }
+    .stock_card_cutout_table {
+      display: none;
+    }
+    
+    &.cutout {
+      .photo_frame {
+        border-bottom: 0;  
+      }
+      .location_field {
+        display: none;
+      }
+    }
+  }
+  
+  &.watch {
+    table {
+      display: none;
+    }
+    
+    &.cutout {
+      .location_field, .note1_field, .note2_field, .note3_field, .note4_field {
+        display: none;
+      }
+      .stock_card_cutout_table {
+        display: table;
+      }
+    }
+  }
+  
+  
+  table {
+    width: 104%;
+    margin: -2px;
+    border-collapse: collapse;
+    font-size: 8px;
+    td {
+      border: 2px solid;
+      text-align: left;
+    }
+  }
 }

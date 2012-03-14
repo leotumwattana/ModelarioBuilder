@@ -9,7 +9,7 @@
     <div class="note3_field"><%= stock_card.note3 %></div>
   <% end %>
   
-  <table>
+  <table class="stock_card_cutout_table">
       <tr>
         <td>Alternatives</td>
         <td>Location</td>
@@ -22,12 +22,12 @@
         <td>Buckle</td>
         <td></td>
       </tr>
-    </table>
+  </table>
   
   <div class="overlay hidden">
     <%= link_to "M", "#", :class => "overlay_button move" %>
     <%= link_to "E", edit_stock_card_path(stock_card.id), :class => "overlay_button edit", remote: true %>
-		<%= link_to "D", stock_card_path(stock_card.id), confirm: "Are you sure?", method: :delete, :class => "overlay_button delete_stock_card" %>
+    <%= link_to "D", stock_card_path(stock_card.id), confirm: "Are you sure?", method: :delete, :class => "overlay_button delete_stock_card" %>
     <% if defined? assignment_id %>
       <%= link_to "R", assignment_path(assignment_id), confirm: "Are you sure?", method: :delete, :class => "overlay_button delete" %>
     <% end %>
